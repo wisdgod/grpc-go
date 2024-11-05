@@ -512,7 +512,7 @@ func FailOnNonTempDialError(f bool) DialOption {
 // the RPCs.
 func WithUserAgent(s string) DialOption {
 	return newFuncDialOption(func(o *dialOptions) {
-		o.copts.UserAgent = s + " " + grpcUA
+		o.copts.UserAgent = s
 	})
 }
 
